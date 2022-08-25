@@ -19,6 +19,10 @@ h2,.white{
     color: #fff;
 }
 
+h3,.grey{
+    color: #bbb;
+}
+
 a{
     color: #7A7C80;
     text-decoration: none;
@@ -64,14 +68,13 @@ a{
 
 .section-2 a{
     display: block;
-    padding: 5px;
     font-size: 1.2rem;
-    padding-left: 0;
+    padding: 5px 5px 5px 0;
     width: 100px;
 }
 /* animations / utilities */
 .section-2 a:hover{
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     color: #fff;
     cursor: pointer;
     transition: 0.2s;
@@ -81,6 +84,12 @@ a{
     color: #fff;
     cursor: pointer;
     transition: 0.3s;
+}
+
+.indent {
+    padding-left: 1rem;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 .white:hover{
@@ -94,12 +103,9 @@ a{
         grid-template-columns: 1fr;
     }
     .section-1{
-        padding:0;
-        padding-top: 5rem;
+        padding: 5rem 0 0;
     }
     .section-2{
-        padding: 0;
-        padding-left: 1.5rem;
-        padding-top: 2rem;
+        padding: 2rem 0 0 1.5rem;
     }
 }
