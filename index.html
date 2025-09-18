@@ -41,8 +41,17 @@
     <!-- Styles -->
     <link rel="stylesheet" href="style.css">
 </head>
+    <script>
+  const toggleBtn = document.querySelector('.theme-toggle');
+  toggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('light');
+    toggleBtn.textContent = 
+      document.body.classList.contains('light') ? '🌙 Dark' : '☀️ Light';
+  });
+</script>
 <body>
 <header class="section-1">
+    <button class="theme-toggle">☀️ Light</button>
     <i class="fas fa-code fa-5x white" aria-hidden="true"></i>
     <h1>Farid Ghoorchian</h1>
     <p>Tehran, Iran</p>
