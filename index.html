@@ -41,58 +41,94 @@
     <meta name="msapplication-TileColor" content="#2b5797">
     <meta name="theme-color" content="#ffffff">
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="style.css">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.1);
+        }
+    </style>
 </head>
-<body>
-<div class="grid-2">
-    <div class="section-1">
-        <i class="fas fa-code fa-5x white" aria-hidden="true"></i>
-        <h1>Farid Ghoorchian</h1>
-        <p>Tehran, Iran</p>
-        <nav aria-label="Social links">
-            <a href="https://www.linkedin.com/in/farid-ghr" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/faridgh1991" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            <a href="https://gitlab.com/faridgh1991" aria-label="GitLab"><i class="fab fa-gitlab"></i></a>
-            <a href="https://instagram.com/faridgh1991" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="https://telegram.me/faridgh1991" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
-        </nav>
-    </div>
-    <div class="section-2">
-        <h2>About</h2>
-        <p class="indent">
-            Born in 1991, I am a dedicated Software Developer based in Tehran with expertise in designing and building scalable backend services. Currently, I work at <strong>SabaVision</strong>, a leading Ad-Network platform in Iran, where I contribute to the development of Ad-Serving microservices based on the OpenRTB protocol. I am passionate about the principles of free software, the Linux operating system, and embracing new technologies and challenges in my work.
-        </p>
-
-        <h2>Skills</h2>
-        <p class="indent">
-            Throughout my career, I have primarily focused on Go, Python, and C/C++. Additionally, I have gained experience with Java, PHP, and Clojure. My technical interests include Software Architecture, Distributed Systems, Concurrent Programming, Linux OS, DevOps, Networking, and Telecom platforms. I enjoy exploring the intricacies of building scalable and efficient software solutions.
-        </p>
-
-        <h2>Projects</h2>
-        <div class="indent">
-            <h3>As Contributor:</h3>
-            <div class="indent">
-                <a href="https://www.sabavision.com/">SabaVision</a>,
-                <a href="https://parspooyesh.net/en/product/enterprise/ibsnglan">IBSng</a>,
-                <a href="https://parspooyesh.net/en/product/telecom/rebin">Rebin</a>,
-                <a href="https://pkg.go.dev/layeh.com/radius">Radius</a>,
-                <a href="https://github.com/openrazer/openrazer">OpenRazer</a>,
-                <a href="https://github.com/libratbag/libratbag">libratbag</a>
-            </div>
-            <h3>As Creator:</h3>
-            <div class="indent">
-                <a href="https://pkg.go.dev/github.com/faridgh1991/samsa">Samsa</a>,
-                <a href="https://pkg.go.dev/github.com/faridgh1991/Numero-Go">Numero</a>,
-                <a href="https://pkg.go.dev/github.com/faridgh1991/MagfaGo">MagfaGo</a>
-            </div>
+<body class="bg-gray-900 text-gray-300">
+    <div class="min-h-screen flex flex-col lg:flex-row max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- Section 1: Profile -->
+        <div class="lg:w-1/3 flex flex-col items-center justify-center text-center py-12 lg:py-24">
+            <i class="fas fa-code fa-5x text-white mb-6 hover-scale" aria-hidden="true"></i>
+            <h1 class="text-4xl font-bold text-white mb-2">Farid Ghoorchian</h1>
+            <p class="text-lg text-gray-400 mb-6">Tehran, Iran</p>
+            <nav aria-label="Social links" class="flex justify-center space-x-4">
+                <a href="https://www.linkedin.com/in/farid-ghr" aria-label="LinkedIn" class="text-gray-400 hover:text-white hover-scale">
+                    <i class="fab fa-linkedin fa-2x"></i>
+                </a>
+                <a href="https://github.com/faridgh1991" aria-label="GitHub" class="text-gray-400 hover:text-white hover-scale">
+                    <i class="fab fa-github fa-2x"></i>
+                </a>
+                <a href="https://gitlab.com/faridgh1991" aria-label="GitLab" class="text-gray-400 hover:text-white hover-scale">
+                    <i class="fab fa-gitlab fa-2x"></i>
+                </a>
+                <a href="https://instagram.com/faridgh1991" aria-label="Instagram" class="text-gray-400 hover:text-white hover-scale">
+                    <i class="fab fa-instagram fa-2x"></i>
+                </a>
+                <a href="https://telegram.me/faridgh1991" aria-label="Telegram" class="text-gray-400 hover:text-white hover-scale">
+                    <i class="fab fa-telegram fa-2x"></i>
+                </a>
+            </nav>
         </div>
 
-        <h2>Contact</h2>
-        <div class="indent">
-            <a href="mailto:FaridGh1991@Gmail.com">FaridGh1991@Gmail.com</a>
+        <!-- Section 2: Content -->
+        <div class="lg:w-2/3 py-12 lg:pl-12">
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold text-white mb-4">About</h2>
+                <p class="text-lg mb-4 pl-4 border-l-4 border-blue-500">
+                    Born in 1991, I am a dedicated Software Developer based in Tehran with extensive experience in building scalable and maintainable backend systems. I specialize in designing and implementing high-performance services, with a strong focus on Go, PostgreSQL, and microservices architectures. Currently, I work at <strong>SabaVision</strong>, a leading Ad-Network platform in Iran, where I contribute to the development of Ad-Serving microservices compliant with the OpenRTB protocol.
+                </p>
+                <p class="text-lg pl-4 border-l-4 border-blue-500">
+                    My expertise includes designing robust APIs, optimizing database interactions, and delivering reliable software in production environments. Passionate about free software, the Linux ecosystem, and open standards, I thrive on embracing new technologies, solving complex problems, and continuously improving systems.
+                </p>
+            </section>
+
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold text-white mb-4">Skills</h2>
+                <p class="text-lg pl-4 border-l-4 border-blue-500">
+                    Throughout my career, I have primarily focused on Go, Python, and C/C++. Additionally, I have gained experience with Java, PHP, and Clojure. My technical interests include Software Architecture, Distributed Systems, Concurrent Programming, Linux OS, DevOps, Networking, and Telecom platforms. I enjoy exploring the intricacies of building scalable and efficient software solutions.
+                </p>
+            </section>
+
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold text-white mb-4">Projects</h2>
+                <div class="pl-4">
+                    <h3 class="text-xl text-gray-300 mb-2">As Contributor:</h3>
+                    <div class="pl-4 grid grid-cols-1 sm:grid-cols-2 gap-2">
+                        <a href="https://www.sabavision.com/" class="text-blue-400 hover:text-blue-300">SabaVision</a>
+                        <a href="https://parspooyesh.net/en/product/enterprise/ibsnglan" class="text-blue-400 hover:text-blue-300">IBSng</a>
+                        <a href="https://parspooyesh.net/en/product/telecom/rebin" class="text-blue-400 hover:text-blue-300">Rebin</a>
+                        <a href="https://pkg.go.dev/layeh.com/radius" class="text-blue-400 hover:text-blue-300">Radius</a>
+                        <a href="https://github.com/openrazer/openrazer" class="text-blue-400 hover:text-blue-300">OpenRazer</a>
+                        <a href="https://github.com/libratbag/libratbag" class="text-blue-400 hover:text-blue-300">libratbag</a>
+                    </div>
+                    <h3 class="text-xl text-gray-300 mb-2 mt-4">As Creator:</h3>
+                    <div class="pl-4 grid grid-cols-1 sm:grid-cols-2 gap-2">
+                        <a href="https://pkg.go.dev/github.com/faridgh1991/samsa" class="text-blue-400 hover:text-blue-300">Samsa</a>
+                        <a href="https://pkg.go.dev/github.com/faridgh1991/Numero-Go" class="text-blue-400 hover:text-blue-300">Numero</a>
+                        <a href="https://pkg.go.dev/github.com/faridgh1991/MagfaGo" class="text-blue-400 hover:text-blue-300">MagfaGo</a>
+                        <a href="https://farid-ghr.pro/sqid-wasm/" class="text-blue-400 hover:text-blue-300">SQID-WASM</a>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-bold text-white mb-4">Contact</h2>
+                <div class="pl-4">
+                    <a href="mailto:FaridGh1991@Gmail.com" class="text-blue-400 hover:text-blue-300">FaridGh1991@Gmail.com</a>
+                </div>
+            </section>
         </div>
     </div>
-</div>
 </body>
 </html>
