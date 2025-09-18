@@ -2,20 +2,29 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
 
 :root {
-    --bg-dark: #101214;
+    --bg: #101214;
     --text-primary: #e0e0e0;
     --text-secondary: #a0a0a5;
     --accent: #4dabf7;
     --heading: #ffffff;
 }
 
+body.light {
+    --bg: #ffffff;
+    --text-primary: #222222;
+    --text-secondary: #555555;
+    --accent: #0077cc;
+    --heading: #000000;
+}
+
 body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-    background-color: var(--bg-dark);
+    background-color: var(--bg);
     color: var(--text-secondary);
     line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Grid layout */
@@ -31,6 +40,7 @@ body {
 h1, h2, h3 {
     color: var(--heading);
     margin-top: 0;
+    transition: color 0.3s ease;
 }
 
 h1 {
@@ -70,6 +80,7 @@ a:hover {
     align-items: center;
     justify-content: center;
     text-align: center;
+    position: relative;
 }
 
 .section-1 i {
@@ -93,6 +104,25 @@ a:hover {
 
 .social-links a {
     font-size: 1.4rem;
+}
+
+/* Theme toggle button */
+.theme-toggle {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: 2px solid var(--accent);
+    border-radius: 20px;
+    padding: 0.3rem 0.8rem;
+    color: var(--accent);
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+.theme-toggle:hover {
+    background: var(--accent);
+    color: #fff;
 }
 
 /* Section 2 (main content) */
@@ -119,11 +149,6 @@ a:hover {
 
 .section-2 a {
     font-size: 1rem;
-}
-
-/* Utilities */
-.indent {
-    padding-left: 1rem;
 }
 
 /* Footer */
