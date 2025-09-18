@@ -5,31 +5,34 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-48CHJGRE11"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){ dataLayer.push(arguments); }
+      function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-48CHJGRE11');
     </script>
-
-    <!-- Fonts & Icons -->
     <script src="https://kit.fontawesome.com/c63caa345a.js" crossorigin="anonymous"></script>
 
-    <!-- Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Farid Ghoorchian - Software Developer in Tehran. Expertise in backend systems, Go, Python, and C/C++. Contributor to open source projects.">
-    <meta name="keywords" content="Farid Ghoorchian, فرید قورچیان, Software Developer, Backend, Go, Golang, Python, C++, Linux, Tehran, SabaVision">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- SEO Meta -->
+    <meta name="description" content="Farid Ghoorchian - Software Developer from Tehran, specializing in backend systems, distributed services, and scalable software solutions. Experienced in Go, Python, and C/C++.">
+    <meta name="keywords" content="Farid Ghoorchian, فرید قورچیان, Software Developer, Backend Engineer, Go, Golang, Python, C++, Tehran, SabaVision, OpenRTB, Distributed Systems">
     <meta name="author" content="Farid Ghoorchian">
     <meta name="robots" content="index, follow">
 
-    <!-- Open Graph -->
+    <!-- Open Graph / Social -->
     <meta property="og:title" content="Farid Ghoorchian - Software Developer">
-    <meta property="og:description" content="Hi, I'm Farid. A backend software developer passionate about Linux, open source, and distributed systems.">
+    <meta property="og:description" content="Hi, my name is Farid. I'm a Software Developer passionate about free software, Linux, and building scalable backend systems.">
     <meta property="og:image" content="https://farid-ghr.ir/logo.jpg">
-    <meta property="og:type" content="website">
+    <meta property="og:image:type" content="image/jpeg">
     <meta property="og:url" content="https://farid-ghr.ir">
+    <meta property="og:type" content="website">
 
-    <!-- Title & Favicon -->
+    <!-- Title -->
     <title>Farid Ghoorchian - Software Developer</title>
+
+    <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -41,84 +44,55 @@
     <!-- Styles -->
     <link rel="stylesheet" href="style.css">
 </head>
-    <script>
-  const toggleBtn = document.querySelector('.theme-toggle');
-  toggleBtn.addEventListener('click', () => {
-    document.body.classList.toggle('light');
-    toggleBtn.textContent = 
-      document.body.classList.contains('light') ? '🌙 Dark' : '☀️ Light';
-  });
-</script>
 <body>
-<header class="section-1">
-    <button class="theme-toggle">☀️ Light</button>
-    <i class="fas fa-code fa-5x white" aria-hidden="true"></i>
-    <h1>Farid Ghoorchian</h1>
-    <p>Tehran, Iran</p>
-    <nav class="social-links">
-        <a href="https://www.linkedin.com/in/farid-ghr" aria-label="LinkedIn" rel="noopener noreferrer" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/faridgh1991" aria-label="GitHub" rel="noopener noreferrer" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://gitlab.com/faridgh1991" aria-label="GitLab" rel="noopener noreferrer" target="_blank"><i class="fab fa-gitlab"></i></a>
-        <a href="https://instagram.com/faridgh1991" aria-label="Instagram" rel="noopener noreferrer" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://telegram.me/faridgh1991" aria-label="Telegram" rel="noopener noreferrer" target="_blank"><i class="fab fa-telegram"></i></a>
-    </nav>
-</header>
-
-<main class="section-2">
-    <section>
+<div class="grid-2">
+    <div class="section-1">
+        <i class="fas fa-code fa-5x white" aria-hidden="true"></i>
+        <h1>Farid Ghoorchian</h1>
+        <p>Tehran, Iran</p>
+        <nav aria-label="Social links">
+            <a href="https://www.linkedin.com/in/farid-ghr" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/faridgh1991" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://gitlab.com/faridgh1991" aria-label="GitLab"><i class="fab fa-gitlab"></i></a>
+            <a href="https://instagram.com/faridgh1991" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://telegram.me/faridgh1991" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+        </nav>
+    </div>
+    <div class="section-2">
         <h2>About</h2>
-        <p>
-            Born in 1991, I am a dedicated Software Developer based in Tehran with extensive experience in building robust backend services. 
-            Currently, I work at <strong>SabaVision</strong>, a prominent Ad-Network platform in Iran, where I contribute to the development of 
-            Ad-Serving microservices based on the OpenRTB protocol. I am passionate about free software, the Linux operating system, 
-            and embracing new technologies and challenges in my work.
+        <p class="indent">
+            Born in 1991, I am a dedicated Software Developer based in Tehran with expertise in designing and building scalable backend services. Currently, I work at <strong>SabaVision</strong>, a leading Ad-Network platform in Iran, where I contribute to the development of Ad-Serving microservices based on the OpenRTB protocol. I am passionate about the principles of free software, the Linux operating system, and embracing new technologies and challenges in my work.
         </p>
-    </section>
 
-    <section>
         <h2>Skills</h2>
-        <p>
-            I primarily focus on <strong>Go</strong>, <strong>Python</strong>, and <strong>C/C++</strong>. I also have experience with 
-            <strong>Java</strong>, <strong>PHP</strong>, and <strong>Clojure</strong>. My interests include 
-            software architecture, distributed systems, concurrent programming, Linux OS, DevOps, networking, and telecom platforms. 
-            I enjoy building scalable and efficient software solutions.
+        <p class="indent">
+            Throughout my career, I have primarily focused on Go, Python, and C/C++. Additionally, I have gained experience with Java, PHP, and Clojure. My technical interests include Software Architecture, Distributed Systems, Concurrent Programming, Linux OS, DevOps, Networking, and Telecom platforms. I enjoy exploring the intricacies of building scalable and efficient software solutions.
         </p>
-    </section>
 
-    <section>
         <h2>Projects</h2>
-        <article>
-            <h3>As Contributor</h3>
-            <ul>
-                <li><a href="https://www.sabavision.com/" target="_blank" rel="noopener noreferrer">SabaVision</a></li>
-                <li><a href="https://parspooyesh.net/en/product/enterprise/ibsnglan" target="_blank" rel="noopener noreferrer">IBSng</a></li>
-                <li><a href="https://parspooyesh.net/en/product/telecom/rebin" target="_blank" rel="noopener noreferrer">Rebin</a></li>
-                <li><a href="https://pkg.go.dev/layeh.com/radius" target="_blank" rel="noopener noreferrer">Radius</a></li>
-                <li><a href="https://github.com/openrazer/openrazer" target="_blank" rel="noopener noreferrer">OpenRazer</a></li>
-                <li><a href="https://github.com/libratbag/libratbag" target="_blank" rel="noopener noreferrer">libratbag</a></li>
-            </ul>
-        </article>
+        <div class="indent">
+            <h3>As Contributor:</h3>
+            <div class="indent">
+                <a href="https://www.sabavision.com/">SabaVision</a>,
+                <a href="https://parspooyesh.net/en/product/enterprise/ibsnglan">IBSng</a>,
+                <a href="https://parspooyesh.net/en/product/telecom/rebin">Rebin</a>,
+                <a href="https://pkg.go.dev/layeh.com/radius">Radius</a>,
+                <a href="https://github.com/openrazer/openrazer">OpenRazer</a>,
+                <a href="https://github.com/libratbag/libratbag">libratbag</a>
+            </div>
+            <h3>As Creator:</h3>
+            <div class="indent">
+                <a href="https://pkg.go.dev/github.com/faridgh1991/samsa">Samsa</a>,
+                <a href="https://pkg.go.dev/github.com/faridgh1991/Numero-Go">Numero</a>,
+                <a href="https://pkg.go.dev/github.com/faridgh1991/MagfaGo">MagfaGo</a>
+            </div>
+        </div>
 
-        <article>
-            <h3>As Creator</h3>
-            <ul>
-                <li><a href="https://pkg.go.dev/github.com/faridgh1991/samsa" target="_blank" rel="noopener noreferrer">Samsa</a></li>
-                <li><a href="https://pkg.go.dev/github.com/faridgh1991/Numero-Go" target="_blank" rel="noopener noreferrer">Numero</a></li>
-                <li><a href="https://pkg.go.dev/github.com/faridgh1991/MagfaGo" target="_blank" rel="noopener noreferrer">MagfaGo</a></li>
-            </ul>
-        </article>
-    </section>
-
-    <section>
         <h2>Contact</h2>
-        <p>
+        <div class="indent">
             <a href="mailto:FaridGh1991@Gmail.com">FaridGh1991@Gmail.com</a>
-        </p>
-    </section>
-</main>
-
-<footer>
-    <p>&copy; 2025 Farid Ghoorchian. All rights reserved.</p>
-</footer>
+        </div>
+    </div>
+</div>
 </body>
 </html>
