@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Optional: Block any future sensitive dirs if you add them
+# Disallow: /private/
