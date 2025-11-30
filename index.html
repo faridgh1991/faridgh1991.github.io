@@ -11,74 +11,88 @@
         }
 
         gtag('js', new Date());
-
-        gtag('config', 'G-K2VR4PQ4FC');
+        gtag('config', 'G-K2VR4PQ4FC', {
+            page_path: window.location.pathname,
+            page_title: document.title,
+            send_page_view: true
+        });
     </script>
-    <script src="https://kit.fontawesome.com/c63caa345a.js" crossorigin="anonymous"></script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://farid-ghr.pro">
-
-    <!-- Meta -->
+    <!-- === Essential SEO Tags === -->
+    <title>Farid Ghoorchian - Senior Backend Engineer | Go, Python, Distributed Systems</title>
     <meta name="description"
-          content="Farid Ghoorchian - Experienced Software Engineer in Tehran specializing in backend development, Go (Golang), Python, C/C++, distributed systems, and scalable architectures. Explore professional experience, skills, and projects.">
-    <meta name="keywords"
-          content="Farid Ghoorchian, فرید قورچیان, Software Engineer, Backend Developer, Go, Golang, Python, C++, Tehran, SabaVision, OpenRTB, Distributed Systems, Microservices">
-    <meta name="author" content="Farid Ghoorchian">
-    <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow">
+          content="Farid Ghoorchian — Senior Backend Engineer in Tehran, Iran. Expert in Go (Golang), Python, C/C++, distributed systems, microservices, and OpenRTB ad tech. Currently at SabaVision.">
 
-    <!-- Open Graph / Social -->
-    <meta property="og:title"
-          content="Farid Ghoorchian - Software Engineer | Backend Specialist in Go & Distributed Systems">
+    <!-- Canonical -->
+    <link rel="canonical" href="https://farid-ghr.pro/">
+
+    <!-- Robots -->
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+    <!-- Language alternates -->
+    <link rel="alternate" href="https://farid-ghr.pro/" hreflang="en">
+    <link rel="alternate" href="https://farid-ghr.pro/" hreflang="x-default">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Farid Ghoorchian - Senior Backend Engineer (Go, Distributed Systems)">
     <meta property="og:description"
-          content="Farid Ghoorchian is a Software Engineer based in Tehran, specializing in scalable backend systems using Go, Python, and C/C++. View professional experience at SabaVision and open-source contributions.">
-    <meta property="og:image" content="https://farid-ghr.pro/logo.jpg">
-    <meta property="og:image:type" content="image/jpeg">
+          content="Senior Backend Engineer based in Tehran. Specialized in Go, Python, C/C++, microservices, and high-scale ad tech systems at SabaVision (OpenRTB).">
+    <meta property="og:url" content="https://farid-ghr.pro/">
+    <meta property="og:image" content="https://farid-ghr.pro/og-image.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:url" content="https://farid-ghr.pro">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Farid Ghoorchian">
+    <meta property="og:image:alt" content="Farid Ghoorchian - Backend Engineer">
     <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Farid Ghoorchian">
+    <meta property="profile:first_name" content="Farid">
+    <meta property="profile:last_name" content="Ghoorchian">
+    <meta property="profile:username" content="faridgh1991">
 
-    <!-- Twitter Cards -->
+    <!-- Twitter Cards (X.com) -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@faridgh1991">
     <meta name="twitter:creator" content="@faridgh1991">
-    <meta name="twitter:title"
-          content="Farid Ghoorchian - Software Engineer | Backend Specialist in Go & Distributed Systems">
+    <meta name="twitter:title" content="Farid Ghoorchian - Senior Backend Engineer (Go, Distributed Systems)">
     <meta name="twitter:description"
-          content="Farid Ghoorchian is a Software Engineer based in Tehran, specializing in scalable backend systems using Go, Python, and C/C++. View professional experience at SabaVision and open-source contributions.">
-    <meta name="twitter:image" content="https://farid-ghr.pro/logo.jpg">
+          content="Senior Backend Engineer in Tehran. Expert in Go, Python, distributed systems & OpenRTB ad tech @ SabaVision.">
+    <meta name="twitter:image" content="https://farid-ghr.pro/og-image.jpg">
+    <meta name="twitter:image:alt" content="Farid Ghoorchian - Backend Engineer">
 
-    <!-- Hreflang for multilingual support -->
-    <link rel="alternate" hreflang="en" href="https://farid-ghr.pro">
-    <link rel="alternate" hreflang="fa" href="https://farid-ghr.pro/fa"> <!-- Assuming a Persian version exists -->
-
-    <!-- Title -->
-    <title>Farid Ghoorchian - Software Engineer | Backend Specialist in Go, Python, C++ & Distributed Systems</title>
-
-    <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <!-- Favicons (add missing larger sizes + webmanifest) -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#2b5797">
-    <meta name="theme-color" content="#ffffff">
 
-    <!-- Tailwind CSS -->
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+    <link rel="preconnect" href="https://kit.fontawesome.com">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+    <!-- Font Awesome -->
+    <link rel="preload" href="https://kit.fontawesome.com/c63caa345a.js" as="script">
+    <script src="https://kit.fontawesome.com/c63caa345a.js" crossorigin="anonymous" defer></script>
+
+    <!-- Tailwind CDN (with recommended config) -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Roboto', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
         }
+    </script>
 
+    <style>
         .hover-scale {
             transition: transform 0.3s ease;
         }
@@ -88,89 +102,127 @@
         }
     </style>
 
-    <!-- Structured Data (JSON-LD for Person Schema) -->
+    <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
             "@type": "Person",
+            "@id": "https://farid-ghr.pro/#person",
             "name": "Farid Ghoorchian",
             "alternateName": "فرید قورچیان",
-            "url": "https://farid-ghr.pro",
-            "image": "https://farid-ghr.pro/logo.jpg",
+            "url": "https://farid-ghr.pro/",
+            "image": "https://farid-ghr.pro/og-image.jpg",
             "sameAs": [
                 "https://www.linkedin.com/in/farid-ghr",
                 "https://github.com/faridgh1991",
                 "https://gitlab.com/faridgh1991",
                 "https://instagram.com/faridgh1991",
-                "https://telegram.me/faridgh1991"
+                "https://twitter.com/faridgh1991",
+                "https://t.me/faridgh1991"
             ],
-            "jobTitle": "Software Engineer",
-            "description": "Experienced backend engineer specializing in Go, Python, C/C++, distributed systems, and scalable software architectures. Based in Tehran, Iran, contributing to OpenRTB-compliant ad-serving microservices at SabaVision.",
-            "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Tehran",
-                "addressCountry": "IR"
+            "jobTitle": "Senior Software Engineer",
+            "worksFor": {
+                "@type": "Organization",
+                "name": "SabaVision",
+                "url": "https://www.sabavision.com"
             },
-            "email": "FaridGh1991@Gmail.com",
+            "alumniOf": {
+                "@type": "CollegeOrUniversity",
+                "name": "Your University Name (optional)"
+            },
             "knowsAbout": [
-                "Go Programming",
+                "Go",
+                "Golang",
                 "Python",
                 "C++",
                 "Distributed Systems",
                 "Microservices",
                 "OpenRTB",
-                "PostgreSQL"
+                "Kafka",
+                "PostgreSQL",
+                "Linux"
             ],
-            "worksFor": {
-                "@type": "Organization",
-                "name": "SabaVision",
-                "url": "https://www.sabavision.com/"
-            }
+            "email": "mailto:FaridGh1991@gmail.com",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Tehran",
+                "addressCountry": "IR"
+            },
+            "hasCredential": [
+                {
+                    "@type": "EducationalOccupationalCredential",
+                    "name": "Backend Engineering"
+                },
+                {
+                    "@type": "EducationalOccupationalCredential",
+                    "name": "Distributed Systems"
+                }
+            ]
+        }
+    </script>
+
+    <!-- WebSite Structured Data -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "url": "https://farid-ghr.pro/",
+            "name": "Farid Ghoorchian",
+            "description": "Personal website and professional portfolio of Farid Ghoorchian"
         }
     </script>
 </head>
 <body class="bg-gray-900 text-gray-300 antialiased">
+<a href="#main-content"
+   class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 bg-blue-500 text-white p-2 z-50">Skip to
+    main content</a>
+
 <main class="min-h-screen flex flex-col lg:flex-row max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
     <!-- Sidebar: Profile -->
     <aside class="lg:w-1/3 flex flex-col items-center justify-center text-center py-12 lg:py-24 bg-gray-800 rounded-lg shadow-md"
-           role="complementary">
+           role="complementary" aria-label="Profile information">
         <i class="fas fa-code fa-5x text-blue-500 mb-6 hover-scale" aria-hidden="true" role="img"
            aria-label="Code icon"></i>
         <h1 class="text-4xl font-bold text-white mb-2">Farid Ghoorchian</h1>
         <p class="text-lg text-gray-400 mb-6">Software Engineer | Backend Specialist<br>Tehran, Iran</p>
-        <nav aria-label="Social links" class="flex justify-center space-x-6">
-            <a href="https://www.linkedin.com/in/farid-ghr" aria-label="Connect on LinkedIn"
-               class="text-gray-400 hover:text-blue-500 hover-scale" rel="me noopener noreferrer">
+        <nav aria-label="Social media links" class="flex justify-center space-x-6">
+            <a href="https://www.linkedin.com/in/farid-ghr" aria-label="Connect with Farid Ghoorchian on LinkedIn"
+               title="LinkedIn Profile" class="text-gray-400 hover:text-blue-500 hover-scale"
+               rel="me noopener noreferrer" target="_blank">
                 <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
             </a>
-            <a href="https://github.com/faridgh1991" aria-label="View GitHub repositories"
-               class="text-gray-400 hover:text-blue-500 hover-scale" rel="me noopener noreferrer">
+            <a href="https://github.com/faridgh1991" aria-label="View Farid Ghoorchian's GitHub repositories"
+               title="GitHub Profile" class="text-gray-400 hover:text-blue-500 hover-scale" rel="me noopener noreferrer"
+               target="_blank">
                 <i class="fab fa-github fa-2x" aria-hidden="true"></i>
             </a>
-            <a href="https://gitlab.com/faridgh1991" aria-label="View GitLab projects"
-               class="text-gray-400 hover:text-blue-500 hover-scale" rel="me noopener noreferrer">
+            <a href="https://gitlab.com/faridgh1991" aria-label="View Farid Ghoorchian's GitLab projects"
+               title="GitLab Profile" class="text-gray-400 hover:text-blue-500 hover-scale" rel="me noopener noreferrer"
+               target="_blank">
                 <i class="fab fa-gitlab fa-2x" aria-hidden="true"></i>
             </a>
-            <a href="https://instagram.com/faridgh1991" aria-label="Follow on Instagram"
-               class="text-gray-400 hover:text-blue-500 hover-scale" rel="me noopener noreferrer">
+            <a href="https://instagram.com/faridgh1991" aria-label="Follow Farid Ghoorchian on Instagram"
+               title="Instagram Profile" class="text-gray-400 hover:text-blue-500 hover-scale"
+               rel="me noopener noreferrer" target="_blank">
                 <i class="fab fa-instagram fa-2x" aria-hidden="true"></i>
             </a>
-            <a href="https://telegram.me/faridgh1991" aria-label="Message on Telegram"
-               class="text-gray-400 hover:text-blue-500 hover-scale" rel="me noopener noreferrer">
+            <a href="https://telegram.me/faridgh1991" aria-label="Message Farid Ghoorchian on Telegram"
+               title="Telegram Contact" class="text-gray-400 hover:text-blue-500 hover-scale"
+               rel="me noopener noreferrer" target="_blank">
                 <i class="fab fa-telegram fa-2x" aria-hidden="true"></i>
             </a>
         </nav>
     </aside>
 
     <!-- Main Content -->
-    <article class="lg:w-2/3 py-12 lg:pl-12" role="main">
-        <section class="mb-12">
-            <h2 class="text-3xl font-semibold text-white mb-4">Professional Summary</h2>
+    <article id="main-content" class="lg:w-2/3 py-12 lg:pl-12" role="main">
+        <section class="mb-12" aria-labelledby="professional-summary">
+            <h2 id="professional-summary" class="text-3xl font-semibold text-white mb-4">Professional Summary</h2>
             <p class="text-lg mb-4 pl-4 border-l-4 border-blue-500">
                 A seasoned Software Engineer based in Tehran, with expertise in developing scalable backend systems.
-                Specializing in <strong>Go (Golang)</strong>, and <strong>microservices
-                    architectures</strong>, I currently contribute to <strong>SabaVision</strong>, Iran's leading
-                Ad-Network platform, focusing on OpenRTB-compliant ad-serving solutions.
+                Specializing in <strong>Go (Golang)</strong>, <strong>Python</strong>, <strong>C/C++</strong>, and
+                <strong>microservices architectures</strong>, I currently contribute to <strong>SabaVision</strong>,
+                Iran's leading Ad-Network platform, focusing on OpenRTB-compliant ad-serving solutions.
             </p>
             <p class="text-lg pl-4 border-l-4 border-blue-500">
                 Committed to robust API design, database optimization, and production-grade software delivery. Advocate
@@ -179,14 +231,14 @@
             </p>
         </section>
 
-        <section class="mb-12">
-            <h2 class="text-3xl font-semibold text-white mb-4">Technical Expertise</h2>
+        <section class="mb-12" aria-labelledby="technical-expertise">
+            <h2 id="technical-expertise" class="text-3xl font-semibold text-white mb-4">Technical Expertise</h2>
             <ul class="text-lg pl-4 border-l-4 border-blue-500 space-y-2">
                 <li><strong>Languages:</strong> Go (Golang), Python, C/C++, Java, Clojure</li>
                 <li><strong>Core Competencies:</strong> Software Architecture, Distributed Systems, Concurrent
                     Programming, Microservices, OpenRTB Protocols
                 </li>
-                <li><strong>Tools & Technologies:</strong> Linux, SQL & no-SQL Databases, DevOps Practices, Networking,
+                <li><strong>Tools & Technologies:</strong> Linux, SQL & NoSQL Databases, DevOps Practices, Networking,
                     Telecommunication Systems
                 </li>
             </ul>
@@ -195,60 +247,71 @@
             </p>
         </section>
 
-        <section class="mb-12">
-            <h2 class="text-3xl font-semibold text-white mb-4">Selected Projects & Contributions</h2>
+        <section class="mb-12" aria-labelledby="projects-contributions">
+            <h2 id="projects-contributions" class="text-3xl font-semibold text-white mb-4">Selected Projects &
+                Contributions</h2>
             <div class="pl-4 space-y-6">
                 <div>
                     <h3 class="text-xl font-semibold text-gray-200 mb-2">Professional Contributions</h3>
                     <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 list-disc list-inside">
                         <li><a href="https://www.sabavision.com/" class="text-blue-400 hover:text-blue-300"
-                               rel="noopener noreferrer">SabaVision - Ad-Network Platform</a></li>
+                               rel="noopener noreferrer" target="_blank" title="SabaVision Ad-Network Platform">SabaVision
+                                - Ad-Network Platform</a></li>
                         <li><a href="https://parspooyesh.net/en/product/enterprise/ibsnglan"
-                               class="text-blue-400 hover:text-blue-300" rel="noopener noreferrer">IBSng - Enterprise
-                                Billing System</a></li>
+                               class="text-blue-400 hover:text-blue-300" rel="noopener noreferrer" target="_blank"
+                               title="IBSng Enterprise Billing System">IBSng - Enterprise Billing System</a></li>
                         <li><a href="https://parspooyesh.net/en/product/telecom/rebin"
-                               class="text-blue-400 hover:text-blue-300" rel="noopener noreferrer">Rebin - Telecom
-                                RADIUS Server</a></li>
+                               class="text-blue-400 hover:text-blue-300" rel="noopener noreferrer" target="_blank"
+                               title="Rebin Telecom RADIUS Server">Rebin - Telecom RADIUS Server</a></li>
                         <li><a href="https://pkg.go.dev/layeh.com/radius" class="text-blue-400 hover:text-blue-300"
-                               rel="noopener noreferrer">Radius - Go RADIUS Implementation</a></li>
+                               rel="noopener noreferrer" target="_blank" title="Radius Go RADIUS Implementation">Radius
+                                - Go RADIUS Implementation</a></li>
                         <li><a href="https://github.com/openrazer/openrazer" class="text-blue-400 hover:text-blue-300"
-                               rel="noopener noreferrer">OpenRazer - Open-Source Razer Driver</a></li>
+                               rel="noopener noreferrer" target="_blank" title="OpenRazer Open-Source Driver">OpenRazer
+                                - Open-Source Razer Driver</a></li>
                         <li><a href="https://github.com/libratbag/libratbag" class="text-blue-400 hover:text-blue-300"
-                               rel="noopener noreferrer">libratbag - Gaming Device Configuration Library</a></li>
+                               rel="noopener noreferrer" target="_blank" title="libratbag Gaming Device Configuration">libratbag
+                                - Gaming Device Configuration Library</a></li>
                     </ul>
                 </div>
                 <div>
                     <h3 class="text-xl font-semibold text-gray-200 mb-2">Personal Projects</h3>
                     <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 list-disc list-inside">
                         <li><a href="https://pkg.go.dev/github.com/faridgh1991/samsa"
-                               class="text-blue-400 hover:text-blue-300" rel="noopener noreferrer">Samsa - Kafka Client
-                                Library</a></li>
+                               class="text-blue-400 hover:text-blue-300" rel="noopener noreferrer" target="_blank"
+                               title="Samsa Kafka Client Library">Samsa - Kafka Client Library</a></li>
                         <li><a href="https://pkg.go.dev/github.com/faridgh1991/Numero-Go"
-                               class="text-blue-400 hover:text-blue-300" rel="noopener noreferrer">Numero-Go - Iranian
-                                SMS Gateway</a></li>
+                               class="text-blue-400 hover:text-blue-300" rel="noopener noreferrer" target="_blank"
+                               title="Numero-Go Iranian SMS Gateway">Numero-Go - Iranian SMS Gateway</a></li>
                         <li><a href="https://pkg.go.dev/github.com/faridgh1991/MagfaGo"
-                               class="text-blue-400 hover:text-blue-300" rel="noopener noreferrer">MagfaGo - Iranian SMS
-                                Service</a></li>
+                               class="text-blue-400 hover:text-blue-300" rel="noopener noreferrer" target="_blank"
+                               title="MagfaGo Iranian SMS Service">MagfaGo - Iranian SMS Service</a></li>
                         <li><a href="https://farid-ghr.pro/sqid-wasm/" class="text-blue-400 hover:text-blue-300"
-                               rel="noopener noreferrer">Sqids-WASM - Short Unique ID Generator (WebAssembly)</a></li>
+                               rel="noopener noreferrer" target="_blank" title="Sqids-WASM Unique ID Generator">Sqids-WASM
+                                - Short Unique ID Generator (WebAssembly)</a></li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <section class="mb-12">
-            <h2 class="text-3xl font-semibold text-white mb-4">Contact</h2>
+        <section class="mb-12" aria-labelledby="contact-info">
+            <h2 id="contact-info" class="text-3xl font-semibold text-white mb-4">Contact</h2>
             <div class="pl-4">
                 <p class="text-lg mb-2">Open to discussions on backend architectures, distributed systems, or
                     collaborative open-source initiatives. Please contact via email for professional inquiries.</p>
-                <a href="mailto:FaridGh1991@Gmail.com" class="text-blue-400 hover:text-blue-300 text-lg" rel="noopener">FaridGh1991@Gmail.com</a>
+                <a href="mailto:FaridGh1991@Gmail.com" class="text-blue-400 hover:text-blue-300 text-lg" rel="noopener"
+                   title="Email Farid Ghoorchian">FaridGh1991@Gmail.com</a>
             </div>
         </section>
     </article>
 </main>
 
-<footer class="bg-gray-900 text-center py-6 text-gray-500 text-sm border-t border-gray-800">
-    <p>&copy; 2025 Farid Ghoorchian. All rights reserved.</p>
+<footer class="bg-gray-950 text-center py-8 text-gray-500 text-sm border-t border-gray-800">
+    <p>© 2024–<span id="current-year">2025</span> Farid Ghoorchian. All rights reserved.</p>
 </footer>
+
+<script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
