@@ -4,8 +4,10 @@
     --text: #f3f4f6;
     --muted: #a1a1aa;
     --line: #232a33;
-    --accent: #f3f4f6;
-    --shadow: none;
+    --accent: #4ade80;
+    --accent-soft: rgba(74, 222, 128, 0.12);
+    --line-strong: #3a4350;
+    --shadow: 0 1px 0 rgba(255, 255, 255, 0.03) inset;
     --radius: 18px;
     --max: 1180px;
 }
@@ -14,12 +16,34 @@
 
 html { scroll-behavior: smooth; }
 
+html[dir="rtl"] body {
+    text-align: right;
+}
+
 body {
     margin: 0;
     font-family: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: var(--text);
-    background: var(--bg);
+    background:
+        radial-gradient(60rem 30rem at 15% -10%, rgba(74, 222, 128, 0.07), transparent 60%),
+        var(--bg);
     line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+    background: var(--accent);
+    color: var(--bg);
+}
+
+:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 0.4rem;
+}
+
+section[id] {
+    scroll-margin-top: 6rem;
 }
 
 a {
@@ -32,14 +56,14 @@ img {
     display: block;
 }
 
+/* hide off the top, not the left: a negative left creates horizontal scroll on RTL pages */
 .skip-link {
     position: absolute;
-    left: -999px;
-    top: auto;
+    left: 1rem;
+    top: -999px;
 }
 
 .skip-link:focus {
-    left: 1rem;
     top: 1rem;
     z-index: 1000;
     background: #fff;
@@ -54,7 +78,13 @@ img {
 }
 
 .topbar {
-    padding: 1.25rem 0 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 0.5rem 0 0;
+    background: rgba(11, 15, 20, 0.8);
+    backdrop-filter: saturate(140%) blur(12px);
+    -webkit-backdrop-filter: saturate(140%) blur(12px);
 }
 
 .topbar-inner {
@@ -63,11 +93,7 @@ img {
     justify-content: space-between;
     gap: 1rem;
     padding: 0.9rem 0;
-    border: 1px solid var(--line);
-    border-left: 0;
-    border-right: 0;
-    border-radius: 0;
-    background: transparent;
+    border-bottom: 1px solid var(--line);
 }
 
 .brand {
@@ -84,11 +110,12 @@ img {
     height: 2rem;
     border-radius: 0.5rem;
     background: transparent;
-    border: 1px solid var(--line);
+    border: 1px solid var(--line-strong);
     display: grid;
     place-items: center;
-    color: var(--text);
+    color: var(--accent);
     font-weight: 700;
+    font-size: 0.85rem;
 }
 
 .nav {
@@ -100,7 +127,9 @@ img {
 .nav a,
 .social a,
 .project-list a,
-.contact-list a {
+.contact-list a,
+.button,
+.button-secondary {
     transition: color 180ms ease, transform 180ms ease, border-color 180ms ease, background 180ms ease;
 }
 
@@ -147,7 +176,7 @@ img {
     align-items: center;
     gap: 0.5rem;
     margin-bottom: 1.1rem;
-    color: var(--muted);
+    color: var(--accent);
     font-size: 0.9rem;
     font-weight: 500;
     letter-spacing: 0.02em;
@@ -205,12 +234,20 @@ h1 {
 .button:hover,
 .button:focus-visible {
     transform: translateY(-1px);
+    background: var(--accent);
+    border-color: var(--accent);
 }
 
 .button-secondary {
-    border: 1px solid var(--line);
+    border: 1px solid var(--line-strong);
     color: var(--text);
     background: transparent;
+}
+
+.button-secondary:hover,
+.button-secondary:focus-visible {
+    border-color: var(--accent);
+    color: var(--accent);
 }
 
 .facts {
@@ -320,6 +357,11 @@ h1 {
     font-size: 0.92rem;
 }
 
+.social a:hover,
+.social a:focus-visible {
+    border-color: var(--accent);
+}
+
 .sections {
     padding: 1rem 0 4rem;
 }
@@ -353,21 +395,43 @@ h2 {
     padding-left: 1.15rem;
 }
 
+html[dir="rtl"] .bullet-list {
+    padding-left: 0;
+    padding-right: 1.15rem;
+}
+
 .bullet-list li + li {
     margin-top: 0.7rem;
 }
 
-.project-list {
+.project-list,
+.contact-list {
     display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 16rem), 1fr));
     gap: 1rem;
 }
 
-.project-list li,
-.contact-list li {
+/* Work + Projects row: stack full-width so the long project list becomes a grid instead of a tall column */
+.section-grid:has(#projects) {
+    grid-template-columns: 1fr;
+}
+
+.project-list a,
+.contact-list a {
+    display: block;
+    height: 100%;
     padding: 1rem 1.1rem;
     border: 1px solid var(--line);
     border-radius: 1rem;
-    background: transparent;
+}
+
+.project-list a:hover,
+.project-list a:focus-visible,
+.contact-list a:hover,
+.contact-list a:focus-visible {
+    border-color: var(--accent);
+    background: var(--accent-soft);
+    transform: translateY(-2px);
 }
 
 .project-list strong,
@@ -375,6 +439,12 @@ h2 {
     display: block;
     margin-bottom: 0.25rem;
     color: var(--text);
+}
+
+.project-list a[target="_blank"] strong::after {
+    content: " ↗";
+    color: var(--muted);
+    font-weight: 400;
 }
 
 .project-list span,
@@ -385,12 +455,28 @@ h2 {
 
 .timeline {
     display: grid;
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+    gap: 1.25rem;
 }
 
 .timeline-item {
     padding-left: 1rem;
     border-left: 2px solid var(--line);
+}
+
+.timeline-item:first-child {
+    border-color: var(--accent);
+}
+
+html[dir="rtl"] .timeline-item {
+    padding-left: 0;
+    padding-right: 1rem;
+    border-left: 0;
+    border-right: 2px solid var(--line);
+}
+
+html[dir="rtl"] .timeline-item:first-child {
+    border-right-color: var(--accent);
 }
 
 .timeline-item strong {
@@ -450,6 +536,11 @@ h2 {
 
     h1 {
         max-width: 100%;
+    }
+
+    html[dir="rtl"] .topbar-inner,
+    html[dir="rtl"] .footer-card {
+        align-items: flex-end;
     }
 }
 
