@@ -548,3 +548,23 @@ html[dir="rtl"] .timeline-item:first-child {
     html { scroll-behavior: auto; }
     * { transition: none !important; }
 }
+
+.timeline-item small {
+    display: block;
+    margin: 0.1rem 0 0.4rem;
+    color: var(--accent);
+    font-size: 0.85rem;
+}
+
+.list-title {
+    margin: 1.5rem 0 0.75rem;
+    color: var(--muted);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+#projects-title + .list-title {
+    margin-top: 0;
+}
